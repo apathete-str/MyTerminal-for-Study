@@ -51,7 +51,7 @@ fi
 echo -e "${CYAN}⚙️ Applying your custom config.fish...${NC}"
 mkdir -p ~/.config/fish
 curl -o ~/.config/fish/config.fish https://raw.githubusercontent.com/apathete-str/MyTerminal-for-Study/main/config.fish
-curl -L https://starship.rs/presets/catppuccin-powerline -o ~/.config/starship.toml
+starship preset catppuccin-powerline -o ~/.config/starship.toml
 
 # 9. INTERACTIVE: Default Shell
 echo "-----------------------------------------------"
