@@ -38,8 +38,8 @@ Run this single command in your terminal to automatically install the shell, too
 
 ```bash
 sudo apt update
-sudo apt install curl
-curl -sL [https://raw.githubusercontent.com/apathete-str/MyTerminal-for-Study/main/install.sh](https://raw.githubusercontent.com/apathete-str/MyTerminal-for-Study/main/install.sh) | bash
+sudo apt install curl git
+curl -sL https://raw.githubusercontent.com/apathete-str/MyTerminal-for-Study/main/install.sh | bash
 ```
 #
 <br><br><br>
