@@ -1,6 +1,6 @@
 # MyTerminal-for-Study
 ---
-A set of intuitive configs for for making a user-friendly shell for linux newbies and veterans-(maybe ). The choices are heavily opinionated
+A set of intuitive configs and tools for for making a user-friendly shell for linux newbies and veterans-(maybe ). The choices are heavily opinionated
 
 ### BASED ON :
 [![Ubuntu](https://img.shields.io/badge/OS-Ubuntu-E9431F?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
@@ -32,7 +32,7 @@ sudo apt install ghostty
 echo "theme = Catppuccin Macchiato" >> ~/.config/ghostty/config
 ```
 
-** Note for Debian Users **
+_Note for Debian Users_
 if the above installation command does not work : Follow the commands listed [**_here_**](https://debian.griffo.io/)
 ---
 
@@ -113,7 +113,7 @@ NOW, restart the terminal and enjoy your FISH ! spoiler- Its delicious ...
 
 ## STARSHIP 
 ---
-### 💖 Acknowledgements
+### 💖 Acknowledgement
 This setup is built around:
 [![Starship](https://img.shields.io/badge/Prompt-Starship-ffa500?style=for-the-badge&logo=starship&logoColor=white)](https://starship.rs/)
 
@@ -149,15 +149,14 @@ echo "starship init fish | source" >> ~/.config/fish/config.fish
 ```bash
 starship preset catppuccin-powerline -o ~/.config/starship.toml
 ```
-
+---
 
 
 
 
 
 ## POKEGET
----
-### 💖 Acknowledgements
+### 💖 Acknowledgement
 This setup is built around:
 [![Pokeget](https://img.shields.io/badge/Utility-Pokeget--RS-ffcb05?style=for-the-badge&logo=rust&logoColor=3d7dca)](https://github.com/talwat/pokeget-rs)
 
@@ -171,7 +170,95 @@ The sprite display functionality is provided by **pokeget-rs**, which is license
 sudo apt install cargo
 cargo install pokeget
 ```
+2. Run it as simply :
+```bash
+pokeget random
+```
+---
 
 
-# TOOLS 
+
+
+
+# NITCH : Display System Info
+### 💖 Acknowledgement
+This setup is built around:
+[![nitch](https://img.shields.io/badge/System_Fetch-nitch-9400d3?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/ssleert/nitch)
+
+Special thanks to ssleert for creating this incredibly fast and minimal system information fetch tool that perfectly complements a clean terminal aesthetic.
+
+### ⚖️ License & Attribution
+The system fetch functionality is provided by **nitch**, which is licensed under the **MIT License**. You can find the source code and installation details [here](https://github.com/ssleert/nitch).
+
+1. Installation:
+```bash
+wget https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh && sh setup.sh
+```
+2. Run it as simply :
+```bash
+nitch
+```
+
+
+! A BIT ADVANCED STUFF 
+
+# TOOLS ( I use )
+
+## EZA : ls Alternative 
+### 💖 Acknowledgement
+This setup is built around:
+[![eza](https://img.shields.io/badge/Utility-eza-4E9A06?style=for-the-badge&logo=linux-foundation&logoColor=white)](https://github.com/eza-community/eza)
+
+Special thanks to the eza-community for continuing the legacy of `exa` and maintaining this feature-rich, user-friendly alternative to the traditional `ls` command.
+
+### ⚖️ License & Attribution
+The directory listing functionality is provided by **eza**, which is licensed under the **MIT License**. You can find the source code and contributor information [here](https://github.com/eza-community/eza).
+
+1.Installation Command :
+```bash
+cargo install eza
+```
+
+2.Initialize eza to be used instead of ' ls ' :
+```bash
+echo "abbr -a ls 'eza --icons --group-directories-first'" >> ~/.config/fish/config.fish
+```
+---
+
+## ZOXIDE : 
+### 💖 Acknowledgement
+This setup is built around:
+[![zoxide](https://img.shields.io/badge/Navigation-zoxide-005f87?style=for-the-badge&logo=gitbook&logoColor=white)](https://github.com/ajeetdsouza/zoxide)
+
+Special thanks to Ajeet D'Souza for building this blazing-fast, "smarter" alternative to the `cd` command that learns your habits and speeds up navigation.
+
+### ⚖️ License & Attribution
+The directory navigation functionality is provided by **zoxide**, which is licensed under the **MIT License**. You can find the source code and full documentation [here](https://github.com/ajeetdsouza/zoxide).
+
+```bash
+sudo apt install zoxide
+```
+if the above does not work , run:
+```bash
+sudo apt install curl 
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+```
+
+##THEFUCK :
+### 💖 Acknowledgement
+This setup is built around:
+[![thefuck](https://img.shields.io/badge/Utility-thefuck-ff0000?style=for-the-badge&logo=python&logoColor=white)](https://github.com/nvbn/thefuck)
+
+Special thanks to Vladimir Iakovlev and the community for this magnificent tool that saves time by correcting errors in previous console commands.
+
+### ⚖️ License & Attribution
+The command-line correction functionality is provided by **thefuck**, which is licensed under the **MIT License**. You can find the source code and full documentation [here](https://github.com/nvbn/thefuck).
+
+1. Installation : 
+(_modified because the original Install command was broken_)
+```bash
+sudo apt install python3-dev python3-pip python3-setuptools
+sudo apt install pipx
+pipx install thefuck
+```
 
