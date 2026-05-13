@@ -1,6 +1,18 @@
 # MyTerminal-for-Study
+
+<div align="center">
+
+[![Linux Compatible](https://img.shields.io/badge/OS-Linux_Compatible-00C7B7?style=for-the-badge&logo=linux&logoColor=white)](https://ubuntu.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=for-the-badge&logo=git&logoColor=white)](https://github.com/apathete-str/MyTerminal-for-Study/pulls)
+
+[![Stars](https://img.shields.io/github/stars/apathete-str/MyTerminal-for-Study?style=for-the-badge&color=f1c40f&logo=github)](https://github.com/apathete-str/MyTerminal-for-Study/stargazers)
+[![Forks](https://img.shields.io/github/forks/apathete-str/MyTerminal-for-Study?style=for-the-badge&color=3498db&logo=github)](https://github.com/apathete-str/MyTerminal-for-Study/network/members)
+[![Contributors](https://img.shields.io/github/contributors/apathete-str/MyTerminal-for-Study?style=for-the-badge&color=ea4aaa&logo=github)](https://github.com/apathete-str/MyTerminal-for-Study/graphs/contributors)
+
+</div>
 ---
-A set of intuitive configs and tools for for making a user-friendly shell for linux newbies and veterans-(maybe ). The choices are heavily opinionated
+A set of intuitive configs and tools for for making a user-friendly shell for linux newbies and veterans-(maybe ). The choices are heavily opinionated.
 
 ### BASED ON :
 [![Ubuntu](https://img.shields.io/badge/OS-Ubuntu-E9431F?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
@@ -244,7 +256,7 @@ sudo apt install curl
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 ```
 
-##THEFUCK :
+## THEFUCK :
 ### 💖 Acknowledgement
 This setup is built around:
 [![thefuck](https://img.shields.io/badge/Utility-thefuck-ff0000?style=for-the-badge&logo=python&logoColor=white)](https://github.com/nvbn/thefuck)
@@ -261,4 +273,17 @@ sudo apt install python3-dev python3-pip python3-setuptools
 sudo apt install pipx
 pipx install thefuck
 ```
+### MY FISH CONFIG FILE : 
+
+(**_The tools are linked_**)
+Its uploaded this repo ....u may view it from there.
+To change your fish.config file with mine , 
+
+RUN :
+```bash
+curl -o ~/.config/fish/config.fish https://raw.githubusercontent.com/apathete-str/MyTerminal-for-Study/main/config.fish
+source ~/.config/fish/config.fish
+```
+
+
 
