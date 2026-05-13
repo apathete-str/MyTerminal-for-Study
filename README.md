@@ -1,3 +1,4 @@
+
 <div align=center > 
   
 # MyTerminal-for-Study
@@ -13,6 +14,12 @@
 [![Stars](https://img.shields.io/github/stars/apathete-str/MyTerminal-for-Study?style=for-the-badge&color=f1c40f&logo=github)](https://github.com/apathete-str/MyTerminal-for-Study/stargazers)
 [![Forks](https://img.shields.io/github/forks/apathete-str/MyTerminal-for-Study?style=for-the-badge&color=3498db&logo=github)](https://github.com/apathete-str/MyTerminal-for-Study/network/members)
 [![Contributors](https://img.shields.io/github/contributors/apathete-str/MyTerminal-for-Study?style=for-the-badge&color=ea4aaa&logo=github)](https://github.com/apathete-str/MyTerminal-for-Study/graphs/contributors)
+<br>
+<br>
+<br>
+
+[sample.webm](https://github.com/user-attachments/assets/696fd9e5-c7f1-424c-b9dd-cc45de2640db)
+
 
 </div>
 ---
