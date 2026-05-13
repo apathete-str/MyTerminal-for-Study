@@ -1,5 +1,5 @@
 # Environment Variables & Paths
-set -gx EDITOR codium
+set -gx EDITOR code
 
 fish_add_path ~/.cargo/bin
 
@@ -8,8 +8,7 @@ function fish_greeting
     pokeget random
     #nitch
 end
-
-abbr -a open 'codium' 
+ 
 # Abbreviations & Aliases
 # Navigation
 abbr -a .. 'cd ..'
