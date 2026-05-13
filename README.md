@@ -1,4 +1,8 @@
+<div align=center > 
+  
 # MyTerminal-for-Study
+
+</div>
 
 <div align="center">
 
@@ -15,13 +19,28 @@
 A set of intuitive configs and tools for for making a user-friendly shell for linux newbies and veterans-(maybe ). The choices are heavily opinionated.
 
 ### BASED ON :
+
 [![Ubuntu](https://img.shields.io/badge/OS-Ubuntu-E9431F?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
-Special thanks to Canonical and the Ubuntu community for providing the robust foundation for this environment.
+
 ---
 
 
+<div align="center">
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=40&pause=1000&color=00C7B7&center=true&vCenter=true&width=500&lines=INSTALLATION+SCRIPT;QUICK+START+GUIDE" alt="Typing SVG" />
+  </a>
+</div>
+---
+( Warning - Still in Alpha )
+## 🚀 Quick Install (Ubuntu 26.04)
 
+Run this single command in your terminal to automatically install the shell, tools, fonts, and configurations:
 
+```bash
+curl -sL [https://raw.githubusercontent.com/apathete-str/MyTerminal-for-Study/main/install.sh](https://raw.githubusercontent.com/apathete-str/MyTerminal-for-Study/main/install.sh) | bash
+```
+#
+<br><br><br>
 
 # TERMINAL : GHOSTTY
 ### 💖 Acknowledgements
