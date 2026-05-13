@@ -37,6 +37,8 @@ A set of intuitive configs and tools for for making a user-friendly shell for li
 Run this single command in your terminal to automatically install the shell, tools, fonts, and configurations:
 
 ```bash
+sudo apt update
+sudo apt install curl
 curl -sL [https://raw.githubusercontent.com/apathete-str/MyTerminal-for-Study/main/install.sh](https://raw.githubusercontent.com/apathete-str/MyTerminal-for-Study/main/install.sh) | bash
 ```
 #
