@@ -1,55 +1,64 @@
 #!/bin/bash
-# MyTerminal-for-Study: Automated Install Script for Ubuntu 26.04 LTS
 
-echo "🚀 Starting MyTerminal-for-Study Installation..."
+# --- Styling ---
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color
 
-# 1. Update system and install basic dependencies
+echo -e "${CYAN}🚀 MyTerminal-for-Study: Interactive Installer${NC}"
+echo "-----------------------------------------------"
+
+# 1. Ask before starting
+read -p "This script will install Fish, Ghostty, and various CLI tools. Continue? (y/n) " start_choice
+if [[ ! "$start_choice" =~ ^[Yy]$ ]]; then
+    echo "Installation cancelled."
+    exit 1
+fi
+
+# 2. Base Installations
+echo -e "${CYAN}📦 Updating system and installing base packages...${NC}"
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y curl wget git unzip fontconfig python3-pip pipx
+sudo apt install -y curl wget git unzip fontconfig python3-pip
 
-# 2. Add PPAs and install Fish & Ghostty
-echo "🐟 Installing Fish Shell and Ghostty Terminal..."
+# 3. Fish & Ghostty
 sudo add-apt-repository -y ppa:fish-shell/release-4
 sudo add-apt-repository -y ppa:mkasberg/ghostty-ubuntu
-sudo apt update
-sudo apt install -y fish ghostty
+sudo apt update && sudo apt install -y fish ghostty
 
-# 3. Install Utilities (eza, thefuck)
-echo "🛠️ Installing Utilities (eza, thefuck)..."
-sudo apt install -y eza 
-pipx install thefuck
+# 4. Utilities
+sudo apt install -y eza thefuck
 
-# 4. Install zoxide
-echo "📂 Installing zoxide..."
+# 5. Zoxide & Starship
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-
-# 5. Install Starship
-echo "⭐ Installing Starship..."
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
-# 6. Install nitch & pokeget-rs (Downloading pre-built binaries for speed)
-echo "👾 Installing nitch and pokeget..."
-sudo wget -qO /usr/local/bin/nitch https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh && sudo sh /usr/local/bin/nitch
-cargo install pokeget # Note: Assumes Rust/Cargo is installed, or users can use the release binary
+# 6. INTERACTIVE: Nitch Symbols
+echo "-----------------------------------------------"
+read -p "👾 Do you want to use Nerd Font symbols in nitch? (y/n) " nitch_choice
+if [[ "$nitch_choice" =~ ^[Yy]$ ]]; then
+    sudo wget -qO /usr/local/bin/nitch https://raw.githubusercontent.com/unxsh/nitch/main/setup.sh && sudo sh /usr/local/bin/nitch
+else
+    sudo apt install nitch -y 2>/dev/null || echo "Skipping nitch..."
+fi
 
-# 7. Install JetBrains Mono Nerd Font
-echo "🔤 Installing JetBrains Mono Nerd Font..."
-wget -qO JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-unzip -q JetBrainsMono.zip -d ~/.local/share/fonts/
-fc-cache -fv
-rm JetBrainsMono.zip
+# 7. INTERACTIVE: Pokeget (Pokemon Sprites)
+read -p "🐹 Install pokeget-rs for terminal sprites? (y/n) " poke_choice
+if [[ "$poke_choice" =~ ^[Yy]$ ]]; then
+    sudo apt install cargo -y
+    cargo install pokeget
+fi
 
-# 8. Setup Configurations
-echo "⚙️ Fetching configurations from repository..."
+# 8. Configurations
+echo -e "${CYAN}⚙️ Applying your custom config.fish...${NC}"
 mkdir -p ~/.config/fish
 curl -o ~/.config/fish/config.fish https://raw.githubusercontent.com/apathete-str/MyTerminal-for-Study/main/config.fish
-
-# Apply Catppuccin Powerline Starship Theme
-mkdir -p ~/.config
 curl -L https://starship.rs/presets/catppuccin-powerline -o ~/.config/starship.toml
 
-# 9. Set Fish as default shell
-echo "👑 Setting Fish as the default shell..."
-chsh -s $(which fish)
+# 9. INTERACTIVE: Default Shell
+echo "-----------------------------------------------"
+read -p "👑 Set Fish as your default shell? (y/n) " shell_choice
+if [[ "$shell_choice" =~ ^[Yy]$ ]]; then
+    chsh -s $(which fish)
+    echo "Default shell changed to Fish."
+fi
 
-echo "✅ Installation Complete! Please restart your terminal or log out and back in."
+echo -e "${CYAN}✅ Done! Restart your terminal to see the changes.${NC}"
