@@ -47,6 +47,7 @@ NOW, restart the terminal and enjoy your FISH ! spoiler- Its delicious ...
 # Theming 
 ---
 
+##
 ### 💖 Acknowledgements
 This setup is built around:
 [![Starship](https://img.shields.io/badge/Prompt-Starship-ffa500?style=for-the-badge&logo=starship&logoColor=white)](https://starship.rs/)
@@ -57,9 +58,13 @@ Special thanks to the Starship maintainers and the Rust community for creating s
 The prompt engine is provided by **Starship**, which is licensed under the **ISC License**. You can find their full license and source code [here](https://github.com/starship/starship).
 
 1. Run this command to install [![Starship](https://img.shields.io/badge/Prompt-Starship-ffa500?style=for-the-badge&logo=starship&logoColor=white)](https://starship.rs/)
-
 ```bash
 sudo apt install starship 
+```
+Alternatively , if the above causes ERROR ,
+run this instead :( _More Modern_ )
+```bash
+curl -sS https://starship.rs/install.sh | sh
 ```
 
 Please check if starship is installed properly with : 
