@@ -45,9 +45,9 @@ NOW, restart the terminal and enjoy your FISH ! spoiler- Its delicious ...
 
 
 # Theming 
----
 
-##
+## STARSHIP 
+---
 ### 💖 Acknowledgements
 This setup is built around:
 [![Starship](https://img.shields.io/badge/Prompt-Starship-ffa500?style=for-the-badge&logo=starship&logoColor=white)](https://starship.rs/)
@@ -64,6 +64,7 @@ sudo apt install starship
 Alternatively , if the above causes ERROR ,
 run this instead :( _More Modern_ )
 ```bash
+sudo apt install curl
 curl -sS https://starship.rs/install.sh | sh
 ```
 
@@ -80,5 +81,16 @@ echo "starship init fish | source" >> ~/.config/fish/config.fish
 
 3. Initialise a preset : (_The theme colors and layout are based on the **Catppuccin Powerline Preset** for Starship, which is licensed under the **MIT License**. You can find the preset configuration [here](https://starship.rs/presets/catppuccin-powerline)._)
 ```bash
-https://starship.rs/presets/catppuccin-powerline
+starship preset catppuccin-powerline -o ~/.config/starship.toml
 ```
+
+## POKEGET
+---
+### 💖 Acknowledgements
+This setup is built around:
+[![Pokeget](https://img.shields.io/badge/Utility-Pokeget--RS-ffcb05?style=for-the-badge&logo=rust&logoColor=3d7dca)](https://github.com/talwat/pokeget-rs)
+
+Special thanks to talwat and the contributors for building this blazing-fast sprites display tool that adds some fun to every terminal session.
+
+### ⚖️ License & Attribution
+The sprite display functionality is provided by **pokeget-rs**, which is licensed under the **MIT License**. You can find the source code and full license [here](https://github.com/talwat/pokeget-rs).
