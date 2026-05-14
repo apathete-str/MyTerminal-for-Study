@@ -19,7 +19,7 @@
 <br>
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/56bef850-df9b-45fe-871e-b54571bc68ff" width="100%" autoplay loop muted playsinline></video>
+  <video src="https://github.com/apathete-str/MyTerminal-for-Study/sampleterminal.mp4" width="100%" autoplay loop muted playsinline></video>
 </div>
 
 
