@@ -71,7 +71,7 @@ sudo apt install ghostty
 ```
 2. Set the theme : (_here we are using [**Catppuccin Macchiato**](https://github.com/catppuccin/ghostty)_)
 ```bash
-echo "theme = Catppuccin Macchiato" >> ~/.config/ghostty/config
+echo "theme = Catppuccin Macchiato" >> ~/.config/ghostty
 ```
 
 _Note for Debian Users_
