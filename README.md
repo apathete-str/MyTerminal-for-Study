@@ -19,9 +19,8 @@
 <br>
 
 <div align="center">
-  <video src="https://github.com/apathete-str/MyTerminal-for-Study/sampleterminal.mp4" width="100%" autoplay loop muted playsinline></video>
+  <video src="https://github.com/user-attachments/assets/4cd638f0-5acf-4c2a-a0ba-37d3c1152f22" width="100%" autoplay loop muted playsinline></video>
 </div>
-
 
 
 </div>
