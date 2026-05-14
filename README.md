@@ -18,7 +18,10 @@
 <br>
 <br>
 
-[sample.webm](https://github.com/user-attachments/assets/696fd9e5-c7f1-424c-b9dd-cc45de2640db)
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/56bef850-df9b-45fe-871e-b54571bc68ff" width="100%" autoplay loop muted playsinline></video>
+</div>
+
 
 
 </div>
