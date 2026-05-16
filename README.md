@@ -18,6 +18,24 @@
 <br>
 <br>
 
+### Sample Screenshots :
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/user-attachments/assets/67a64174-a8ae-4fac-ac1b-ea2ee9d665dc" alt="Screenshot 1" width="100%"/>
+      </td>
+      <td align="center">
+        <img src="https://github.com/user-attachments/assets/84d91fa9-c13d-4c29-8caa-28c9a141fa19" alt="Screenshot 2" width="100%"/>
+      </td>
+      <td align="center">
+        <img src="https://github.com/user-attachments/assets/c90b137b-2ea7-4307-8c23-f54ae2ab4d23" alt="Screenshot 3" width="100%"/>
+      </td>
+    </tr>
+  </table>
+</div>
+
 <div align="center">
   <video src="https://github.com/user-attachments/assets/4cd638f0-5acf-4c2a-a0ba-37d3c1152f22" width="100%" autoplay loop muted playsinline></video>
 </div>
