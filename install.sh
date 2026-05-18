@@ -25,10 +25,10 @@ sudo add-apt-repository -y ppa:mkasberg/ghostty-ubuntu
 sudo apt update && sudo apt install -y fish ghostty
 
 # 4. Utilities
-sudo apt install -y eza thefuck
+sudo apt install -y eza thefuck 
 
 # 5. Zoxide & Starship
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+sudo apt install zoxide
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 # 6. INTERACTIVE: Nitch Symbols
