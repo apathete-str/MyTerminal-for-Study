@@ -88,6 +88,9 @@ sudo apt update
 sudo apt install ghostty
 ```
 2. Set the theme : (_here we are using [**Catppuccin Macchiato**](https://github.com/catppuccin/ghostty)_)
+   i. Open Ghostty
+   ii. Press _**ctrl**+**,**_ .
+   iii. Copy the following lines and Paste it in the text file that opens up:
 ```bash
 echo "theme = Catppuccin Macchiato" >> ~/.config/ghostty
 ```
@@ -126,10 +129,12 @@ fc-list | grep -i "JetBrainsMono"
 ```
 
 3. Apply the fonts :
+   i. Open Ghostty
+   ii. Press _**ctrl**+**,**_ and then paste the following lines in the file that opens up in Text Editor:
 ```bash
-echo "font-family = JetBrainsMono Nerd Font Mono" >> ~/.config/ghostty/config
-echo "font-style = Bold" >> ~/.config/ghostty/config
-echo "font-size = 12" >> ~/.config/ghostty/config
+font-family = JetBrainsMono Nerd Font Mono
+font-style = Bold
+font-size = 12
 ```
 ---
 
