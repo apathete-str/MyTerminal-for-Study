@@ -5,9 +5,7 @@ fish_add_path ~/.cargo/bin
 
 # Custom Greeting
 function fish_greeting
-    if command -v pokeget > /dev/null
-        pokeget random
-    end
+    pokeget random
     #nitch
 end
  
@@ -16,10 +14,8 @@ end
 abbr -a .. 'cd ..'
 abbr -a ... 'cd ../..'
 
-# ls Alternative (Safe Check)
-if command -v eza > /dev/null
-    abbr -a ls 'eza --icons --group-directories-first'
-end
+#ls Alternative
+abbr -a ls 'eza --icons --group-directories-first'
 
 # Safe Operations
 abbr -a rm 'rm -i'
@@ -48,15 +44,7 @@ function extract --description "Extract various archive formats"
     end
 end
 
-# Safe Tool Initializations
-if command -v zoxide > /dev/null
-    zoxide init fish | source
-end
-
-if command -v thefuck > /dev/null
-    thefuck --alias | source
-end
-
-if command -v starship > /dev/null
-    starship init fish | source
-ens
+# Tool Initializations
+zoxide init fish | source
+thefuck --alias | source
+starship init fish | source
