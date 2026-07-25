@@ -14,21 +14,20 @@ if [[ ! "$start_choice" =~ ^[Yy]$ ]]; then
     exit 1
 fi
 
-# 2. Base Installations
+# 2. Base Installations & Extract Dependencies (ADDED build-essential & unrar-free)
 echo -e "${CYAN}📦 Updating system and installing base packages...${NC}"
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y curl wget git unzip fontconfig python3-pip
+sudo apt install -y curl wget git unzip fontconfig python3-pip bzip2 gzip tar p7zip-full ncompress unrar-free cargo build-essential
 
-# 3. Fish & Ghostty
-sudo add-apt-repository -y ppa:fish-shell/release-4
-sudo add-apt-repository -y ppa:mkasberg/ghostty-ubuntu
-sudo apt update && sudo apt install -y fish ghostty
+# 3. Fish (Debian Safe)
+echo -e "${CYAN}🐟 Installing Fish...${NC}"
+sudo apt install -y fish
 
 # 4. Utilities
-sudo apt install -y eza thefuck 
+sudo apt install -y thefuck 
 
 # 5. Zoxide & Starship
-sudo apt install zoxide
+sudo apt install -y zoxide
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 # 6. INTERACTIVE: Nitch Symbols
@@ -40,11 +39,11 @@ else
     sudo apt install nitch -y 2>/dev/null || echo "Skipping nitch..."
 fi
 
-# 7. INTERACTIVE: Pokeget (Pokemon Sprites)
-read -p "🐹 Install pokeget-rs for terminal sprites? (y/n) " poke_choice
-if [[ "$poke_choice" =~ ^[Yy]$ ]]; then
-    sudo apt install cargo -y
+# 7. INTERACTIVE: Pokeget & Eza via Cargo
+read -p "🐹 Install pokeget-rs and eza via Cargo? (y/n) " cargo_choice
+if [[ "$cargo_choice" =~ ^[Yy]$ ]]; then
     cargo install pokeget
+    cargo install eza
 fi
 
 # 8. Configurations
